@@ -19,13 +19,13 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '22.x'
+          node-version: '22'
 
       - name: Install dependencies
         run: npm ci
 
-      - name: Install Playwright Browsers
-        run: node ./node_modules/playwright/cli.js install --with-deps
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps
 
       - name: Run E2E tests
-        run: node ./node_modules/@playwright/test/cli.js test
+        run: npm test
