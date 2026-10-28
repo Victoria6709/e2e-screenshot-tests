@@ -25,7 +25,7 @@ jobs:
         run: npm ci
 
       - name: Install Playwright Browsers
-        run: node ./node_modules/playwright/cli.js install --with-deps chromium
+        run: node ./node_modules/playwright/cli.js install --with-deps
 
       - name: Run E2E tests
         run: node ./node_modules/@playwright/test/cli.js test
