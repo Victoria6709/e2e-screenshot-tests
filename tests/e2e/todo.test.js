@@ -12,7 +12,8 @@ test('Додавання нового завдання до списку', async
   
   const todoItem = page.locator('.todo-list li');
   await expect(todoItem).toHaveCount(1);
-  await expect(todoItem).toHaveText('Вивчити Playwright E2E');
+  // Навмисна помилка для перевірки блокування CI у Pull Request
+  await expect(todoItem).toHaveText('Неіснуючий текст для падіння CI');
 });
 
 test('Перемикання статусу виконання завдання', async ({ page }) => {
